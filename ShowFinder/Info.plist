@@ -25,6 +25,9 @@
 	<!-- Only standard HTTPS: no export-compliance question on every TestFlight upload. -->
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<!-- The page asks for the phone's location (nearby theatres); without this key WebKit refuses it outright. -->
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>ShowFinder uses your location to find theatres and shows near you.</string>
 	<key>UILaunchScreen</key>
 	<dict>
 		<key>UIColorName</key>

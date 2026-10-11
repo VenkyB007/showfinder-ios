@@ -10,6 +10,8 @@ iPhone shell around the Show Finder web app at `https://showfinder.nikolatesla.c
   The server returns `showfinder://auth?code=…`, and the code + verifier are POSTed to
   `/app-auth/exchange` inside the web view (`SignInHandoff.swift`).
 - Booking links (target=_blank) open in Safari.
+- **Location** (1.1+): `NSLocationWhenInUseUsageDescription` in Info.plist lets the page's
+  `navigator.geolocation` (nearby theatres) ask for the phone's location; without it WebKit refuses silently.
 - The page can recognise the shell by `ShowFinderIOS/<version>` in the user agent.
 - No self-update: new builds come through TestFlight, or a fresh sideload.
 
